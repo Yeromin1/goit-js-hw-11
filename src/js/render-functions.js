@@ -1,6 +1,7 @@
-// render-functions.js
 import iziToast from 'izitoast';
+import 'iziToast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export const renderImages = images => {
   const gallery = document.querySelector('.gallery');
