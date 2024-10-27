@@ -18,7 +18,7 @@ export const renderImages = images => {
     return;
   }
 
-  const limitedImages = images.slice(0, 9);
+  const limitedImages = images.slice(0, 12);
 
   const markup = limitedImages
     .map(
