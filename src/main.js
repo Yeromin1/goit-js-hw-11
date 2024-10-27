@@ -1,10 +1,7 @@
 import { fetchImages } from './js/pixabay-api.js';
 import { renderImages } from './js/render-functions.js';
-// import iziToast from 'izitoast';
-// import 'iziToast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('#search-form');
-// const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 
 form.addEventListener('submit', async event => {
@@ -14,17 +11,7 @@ form.addEventListener('submit', async event => {
   const query = queryInput.value.trim();
   queryInput.value = '';
 
-  // if (!query) {
-  //   iziToast.warning({
-  //     title: 'Warning',
-  //     message: 'Please enter a search term.',
-  //     position: 'topRight',
-  //   });
-  //   return;
-  // }
-
-  // loader.classList.remove('hidden');
-  // gallery.innerHTML = '';
+  loader.classList.remove('hidden');
 
   fetchImages(query)
     .then(images => {

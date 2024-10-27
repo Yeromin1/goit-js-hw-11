@@ -22,31 +22,23 @@ export const renderImages = images => {
 
   const markup = limitedImages
     .map(
-      ({
-        webformatURL,
-        largeImageURL,
-        tags,
-        likes,
-        views,
-        comments,
-        downloads,
-      }) => `
+      item => `
             <div class="photo-card">
-                <a href="${largeImageURL}">
-                    <img src="${webformatURL}" alt="${tags}" />
+                <a href="${item.largeImageURL}">
+                    <img src="${item.webformatURL}" alt="${item.tags}" />
                 </a>
                 <div class="info">
                     <p class="info-item">
-                        <b>Likes:</b> ${likes}
+                        <b>Likes:</b> ${item.likes}
                     </p>
                     <p class="info-item">
-                        <b>Views:</b> ${views}
+                        <b>Views:</b> ${item.views}
                     </p>
                     <p class="info-item">
-                        <b>Comments:</b> ${comments}
+                        <b>Comments:</b> ${item.comments}
                     </p>
                     <p class="info-item">
-                        <b>Downloads:</b> ${downloads}
+                        <b>Downloads:</b> ${item.downloads}
                     </p>
                 </div>
             </div>
