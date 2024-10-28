@@ -9,8 +9,17 @@ form.addEventListener('submit', async event => {
 
   const queryInput = form.elements.query;
   const query = queryInput.value.trim();
-  queryInput.value = '';
 
+  if (query === '') {
+    iziToast.error({
+      title: 'Error',
+      message: 'Please enter a search term.',
+      position: 'topRight',
+    });
+    return;
+  }
+
+  queryInput.value = '';
   loader.classList.remove('hidden');
 
   fetchImages(query)

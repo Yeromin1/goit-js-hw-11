@@ -18,9 +18,7 @@ export const renderImages = images => {
     return;
   }
 
-  const limitedImages = images.slice(0, 9);
-
-  const markup = limitedImages
+  const markup = images
     .map(
       item => `
             <div class="photo-card">
